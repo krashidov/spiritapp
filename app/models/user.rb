@@ -40,11 +40,7 @@ class User < ActiveRecord::Base
 
   def clean_user_for_dev
     if self.organization.nil?
-      self.organization_id = Organization.first
-    end
-
-    if self.uid.nil?
-      self.uid = self.email
+      self.organization = Organization.first
     end
   end
 end

@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :tasks, except: [:new, :edit]
-  resources :default_tasks, except: [:new, :edit]
-  resources :careplans, except: [:new, :edit]
-  resources :organizations, except: [:new]
-  resources :providers
 
-  resources :clients
+  scope(path: '/api') do
+    resources :tasks, except: [:new, :edit]
+    resources :default_tasks, except: [:new, :edit]
+    resources :careplans, except: [:new, :edit]
+    resources :organizations, except: [:new]
+    resources :providers
+    resources :clients
+  end
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -18,6 +21,7 @@ Rails.application.routes.draw do
   #Let's make a home page.
   root 'pages#index'
 
+  get '/dashboard', to: 'pages#dashboard'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

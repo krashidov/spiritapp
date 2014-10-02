@@ -29,6 +29,5 @@ FactoryGirl.define do
     organization
     password "password"
     password_confirmation { "password" }
-    uid generated_email
   end
 end
