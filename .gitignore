@@ -14,3 +14,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+frontend/node_modules
+frontend/.editorconfig
+*/.DS_Store
+

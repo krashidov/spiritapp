@@ -19,6 +19,7 @@ gem 'paper_trail', '~> 3.0.5'
 gem 'devise'
 gem 'react-rails', github: 'reactjs/react-rails', branch: 'master'
 gem 'showdown-rails'
+gem "bower-rails", "~> 0.9.1"
 
 
 
