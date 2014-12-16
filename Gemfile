@@ -17,10 +17,9 @@ gem 'cancan'
 gem 'rolify'
 gem 'paper_trail', '~> 3.0.5'
 gem 'devise'
-gem 'react-rails', github: 'reactjs/react-rails', branch: 'master'
+gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
+gem "browserify-rails", "~> 0.5"
 gem 'showdown-rails'
-gem "bower-rails", "~> 0.9.1"
-
 
 
 group :test, :development do

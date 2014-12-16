@@ -1,0 +1,11 @@
+{
+  "name": "spiritapp",
+  "devDependencies" : {
+    "browserify": "~> 6.3",
+    "reactify": "~> 0.17"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10"
+  }
+}
