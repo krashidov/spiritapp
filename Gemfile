@@ -18,8 +18,7 @@ gem 'rolify'
 gem 'paper_trail', '~> 3.0.5'
 gem 'devise'
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
-gem "browserify-rails", "~> 0.5"
-gem 'showdown-rails'
+gem 'therubyracer', platforms: :ruby
 
 
 group :test, :development do
@@ -40,7 +39,6 @@ group :development do
   gem 'better_errors'
   gem 'annotate'
   gem 'bullet'
-  gem 'debugger'
   gem 'flay'
   gem 'hirb'
   gem 'simple_form'

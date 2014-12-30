@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 
   scope(path: '/api') do
     resources :tasks, except: [:new, :edit]
-    resources :default_tasks, except: [:new, :edit]
     resources :careplans, except: [:new, :edit]
     resources :organizations, except: [:new]
     resources :providers
     resources :clients
   end
 
+  resources :default_tasks, except: [:new, :edit]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -21,7 +21,10 @@ Rails.application.routes.draw do
   #Let's make a home page.
   root 'pages#index'
 
-  get '/dashboard', to: 'pages#dashboard'
+  get '*unmatched_route', :to => 'pages#index'
+
+  # get '*path' => redirect('/')
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

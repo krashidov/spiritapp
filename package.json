@@ -1,8 +1,14 @@
 {
   "name": "spiritapp",
-  "devDependencies" : {
-    "browserify": "~> 6.3",
-    "reactify": "~> 0.17"
+  "main": "webpack.config.js",
+  "dependencies" : {
+    "react": "^0.12.2",
+    "react-router": "*",
+    "react-bootstrap": "*"
+  },
+  "devDependencies": {
+    "webpack": "^1.4.13",
+    "jsx-loader": "^0.12.2"
   },
   "license": "MIT",
   "engines": {

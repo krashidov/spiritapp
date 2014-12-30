@@ -1,1 +1,1 @@
-var HelloMessage = require('./components/HelloMessage');
+//= require ./built/App

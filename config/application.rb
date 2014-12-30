@@ -19,6 +19,5 @@ module Spiritapp
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.api_only = false
-    config.browserify_rails.commandline_options = "-t [reactify --es6] --extension=\".react.js\""
   end
 end

@@ -11,8 +11,6 @@ class DefaultTasksController < ApplicationController
   # GET /default_tasks/1.json
   def show
     @default_task = DefaultTask.find(params[:id])
-
-    render json: @default_task
   end
 
   # POST /default_tasks
