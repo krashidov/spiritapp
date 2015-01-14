@@ -4,6 +4,8 @@ var { Route, RouteHandler, Link } = Router;
 var TopNavbar = require('./TopNavbar.react.js');
 var Grid = require('react-bootstrap/Grid');
 var Dashboard = require('./Dashboard.react.js')
+var View = require('./View.react.js')
+
 var App = React.createClass({
 
   mixins: [ Router.Navigation ],
@@ -22,6 +24,7 @@ var App = React.createClass({
 var routes = (
   <Route handler={App}>
     <Route name="dashboard" path="/dashboard" handler={Dashboard}/>
+    <Route name="view" path="/view" handler={View}/>
   </Route>
 );
 

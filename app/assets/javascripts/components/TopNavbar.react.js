@@ -15,13 +15,12 @@ var TopNavbar = React.createClass({
         return (
             <Navbar>
               <Nav>
-                <NavItem eventKey={1} href="#">Link</NavItem>
-                <NavItem eventKey={2} href="#">Link</NavItem>
-                <DropdownButton eventKey={3} title="Dropdown">
-                  <MenuItem eventKey={1}>
-                    <Link to="dashboard">Dashboard</Link>
-                  </MenuItem>
-                </DropdownButton>
+                <li>
+                  <Link to="dashboard">Dashboard</Link>
+                </li>
+                <li>
+                  <a data-method="delete" href="/users/sign_out" rel="nofollow">Logout</a>
+                </li>
               </Nav>
             </Navbar>
         );

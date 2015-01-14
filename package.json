@@ -1,17 +1,31 @@
 {
   "name": "spiritapp",
   "main": "webpack.config.js",
-  "dependencies" : {
+  "dependencies": {
+    "lodash": "^2.4.1",
     "react": "^0.12.2",
+    "react-bootstrap": "*",
     "react-router": "*",
-    "react-bootstrap": "*"
+    "react-table": "^1.0.0",
+    "react-tools": "*"
   },
   "devDependencies": {
-    "webpack": "^1.4.13",
-    "jsx-loader": "^0.12.2"
+    "jest-cli": "^0.2.1",
+    "jsx-loader": "^0.12.2",
+    "node-debug": "^0.1.0",
+    "webpack": "^1.4.13"
   },
   "license": "MIT",
   "engines": {
     "node": ">= 0.10"
+  },
+  "jest": {
+    "scriptPreprocessor": "preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "react"
+    ]
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
