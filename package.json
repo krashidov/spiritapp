@@ -3,6 +3,7 @@
   "main": "webpack.config.js",
   "dependencies": {
     "lodash": "^2.4.1",
+    "marty": "^0.8.3",
     "react": "^0.12.2",
     "react-bootstrap": "*",
     "react-router": "*",
@@ -13,6 +14,8 @@
     "jest-cli": "^0.2.1",
     "jsx-loader": "^0.12.2",
     "node-debug": "^0.1.0",
+    "reactable": "^0.9.4",
+    "reflux": "^0.2.3",
     "webpack": "^1.4.13"
   },
   "license": "MIT",

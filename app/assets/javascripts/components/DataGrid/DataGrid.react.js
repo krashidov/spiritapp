@@ -1,41 +1,21 @@
 var React = require('react');
 var _ = require('lodash');
-var Table = require('react-bootstrap/Table');
+var Reactable = require('reactable');
+var ServerActionCreators = require('../../actions/ServerActionCreators');
+var ClientStore =  require('../../stores/ClientStore');
+var Table = Reactable.Table;
+var Tr = Reactable.Tr;
 
 var DataGrid = React.createClass({
     displayName: 'DataGrid',
 
-    propTypes: {
-        data: React.PropTypes.array.isRequired
-    },
-
-    _getColumns: function() {
-        return _.keys(this.props.data[0]).map(function(column, key) {
-            return (<th key={key}>{column}</th>);
-        });
-    },
-
-    _getRows: function() {
-        return this.props.data.map(function(row, key){
-            var rowItems =  _.map(row, function(rowItem, key){
-                return (<td key={key}>{rowItem}</td>);
-            });
-            return (<tr>{rowItems}</tr>);
-        });
+    handleClick() {
+        ServerActionCreators.loadClients();
     },
 
     render: function () {
         return (
-            <Table striped bordered condensed hover>
-                <thead>
-                    <tr>
-                        {this._getColumns()}
-                    </tr>
-                </thead>
-                <tbody>
-                    {this._getRows()}
-                </tbody>
-            </Table>
+            <a onClick={this.handleClick}>click</a>
         );
     }
 });
