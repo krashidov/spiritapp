@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140912080125) do
+ActiveRecord::Schema.define(version: 20150129022206) do
 
   create_table "careplans", force: true do |t|
     t.integer  "organization_id"
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20140912080125) do
   create_table "clients", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "lastname"
-    t.string   "firstname"
+    t.string   "last_name"
+    t.string   "first_name"
     t.string   "medicaid"
     t.string   "ssi"
     t.string   "phone_number"
@@ -75,8 +75,8 @@ ActiveRecord::Schema.define(version: 20140912080125) do
   create_table "providers", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "lastname"
-    t.string   "firstname"
+    t.string   "last_name"
+    t.string   "first_name"
     t.string   "ssi"
     t.string   "phone_number"
     t.string   "address"

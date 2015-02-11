@@ -5,6 +5,7 @@ class ClientsController < ApplicationController
   # GET /clients.json
   def index
     @clients = Client.all
+    render json: @clients, except: [:created_at, :updated_at]
   end
 
   # GET /clients/1

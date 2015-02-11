@@ -5,8 +5,8 @@
 #  id                     :integer          not null, primary key
 #  created_at             :datetime
 #  updated_at             :datetime
-#  lastname               :string(255)
-#  firstname              :string(255)
+#  last_name              :string(255)
+#  first_name             :string(255)
 #  medicaid               :string(255)
 #  ssi                    :string(255)
 #  phone_number           :string(255)
@@ -30,13 +30,14 @@
 #
 #  index_clients_on_organization_id  (organization_id)
 #
+
 require "date"
 
 FactoryGirl.define do
   factory :client do
     organization
-    lastname "Johnson"
-    firstname "Dave"
+    last_name "Johnson"
+    first_name "Dave"
     medicaid "Y#{Random.rand(10**6)}"
     ssi "650-00-000"
     phone_number "3032612082"

@@ -5,18 +5,18 @@ var TopNavbar = require('./TopNavbar.react.js');
 var Grid = require('react-bootstrap/Grid');
 var Dashboard = require('./Dashboard.react.js')
 var View = require('./View.react.js')
-
+var ClientEdit = require('./client/ClientEdit.react.js')
 var App = React.createClass({
 
   mixins: [ Router.Navigation ],
 
   render: function () {
     return (
-      <Grid className="container-fluid">
+      <div className="container">
         <TopNavbar/>
         { }
         <RouteHandler/>
-      </Grid>
+      </div>
     );
   }
 });
@@ -25,6 +25,7 @@ var routes = (
   <Route handler={App}>
     <Route name="dashboard" path="/dashboard" handler={Dashboard}/>
     <Route name="view" path="/view" handler={View}/>
+    <Route name="clientEdit" path="/clients/:id" handler={ClientEdit}/>
   </Route>
 );
 

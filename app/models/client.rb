@@ -5,8 +5,8 @@
 #  id                     :integer          not null, primary key
 #  created_at             :datetime
 #  updated_at             :datetime
-#  lastname               :string(255)
-#  firstname              :string(255)
+#  last_name              :string(255)
+#  first_name             :string(255)
 #  medicaid               :string(255)
 #  ssi                    :string(255)
 #  phone_number           :string(255)
@@ -39,8 +39,8 @@ class Client < ActiveRecord::Base
 
   validates :organization_id, presence: true
   validates_uniqueness_of :medicaid
-  validates :lastname, presence: true
-  validates :firstname, presence: true
+  validates :last_name, presence: true
+  validates :first_name, presence: true
   validates :medicaid, presence: true
   validates :ssi, presence: true
   validates :phone_number, presence: true

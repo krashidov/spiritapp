@@ -5,8 +5,8 @@
 #  id                            :integer          not null, primary key
 #  created_at                    :datetime
 #  updated_at                    :datetime
-#  lastname                      :string(255)
-#  firstname                     :string(255)
+#  last_name                     :string(255)
+#  first_name                    :string(255)
 #  ssi                           :string(255)
 #  phone_number                  :string(255)
 #  address                       :string(255)
@@ -36,8 +36,8 @@ require "date"
 FactoryGirl.define do
   factory :provider do
     organization
-    lastname "Patterson"
-    firstname "Peter"
+    last_name "Patterson"
+    first_name "Peter"
     ssi "650-01-001"
     phone_number "3036665555"
     address "456 caretaker way"

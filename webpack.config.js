@@ -23,6 +23,9 @@ module.exports = {
       'app/assets/javascripts/components'
     ]
   },
+
+  plugins: [new webpack.IgnorePlugin(/vertx/)],
+  
   extensions: ['', '.js', '.js.erb', '.react.js'],
   module: {
     loaders: [

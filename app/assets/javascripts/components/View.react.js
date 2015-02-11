@@ -4,14 +4,19 @@ var DataGrid = require('./DataGrid/DataGrid.react.js');
 var View = React.createClass({
     displayName: 'View',
 
+    _getData() {
+      return [
+        [(<span>Hello</span>), (<span>Goodby</span>)],
+        [(<span>Hola</span>), (<span>Arrivaderchi</span>)]
+      ];
+    },
+
+    _getColumns() {
+      return ['Greeting', 'Salutations'];
+    },
+
     render: function () {
-        var data = [
-          {favoriteColor:'blue',  age: 30, name: "Athos",      job: "Musketeer"},
-          {favoriteColor: 'red' ,  age: 33, name: "Porthos",    job: "Musketeer"},
-          {favoriteColor: 'blue' ,  age: 27, name: "Aramis",     job: "Musketeer"},
-          {favoriteColor: 'orange' ,  age: 25, name: "d'Artagnan", job: "Guard"}
-        ];
-        return (<DataGrid data={data}/>);
+        return (<DataGrid data={this._getData()} columns={this._getColumns()}/>);
     }
 });
 

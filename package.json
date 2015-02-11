@@ -2,13 +2,14 @@
   "name": "spiritapp",
   "main": "webpack.config.js",
   "dependencies": {
-    "lodash": "^2.4.1",
+    "lodash": "3.0.0",
     "marty": "^0.8.3",
     "react": "^0.12.2",
     "react-bootstrap": "*",
     "react-router": "*",
     "react-table": "^1.0.0",
-    "react-tools": "*"
+    "react-tools": "*",
+    "rsvp": "^3.0.16"
   },
   "devDependencies": {
     "jest-cli": "^0.2.1",
