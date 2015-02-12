@@ -29,15 +29,16 @@ var ClientListView = React.createClass({
     },
 
     getColumns(){
+        var clients = this._getClients();
         var ret = [];
-        for (var key in this.state.clients && this.state.clients[0]){
+        for (var key in clients && clients[0]){
                 ret.push(key.split('_').join(' '));
         }
         return ret;
     },
 
     _getClientMarkup(){
-        return _.map(this.state.clients, (client) =>{
+        return _.map(this._getClients(), (client) =>{
             client.id = (<Link to="client" params={{clientId: client.id}}>{client.id}</Link>);
             return client;
         });
@@ -47,9 +48,24 @@ var ClientListView = React.createClass({
         this.transitionTo('client', {clientId: clientId});
     },
 
+    _getClients(){
+        return _.map(this.state.clients, function(client) { 
+          return _.pick(client, 
+            ['id',
+            'first_name',
+            'last_name',
+            'address', 
+            'city',
+            'postal_code',
+            'state',
+            'hours_plus_travel', 
+            'date_of_birth']);
+        });
+    },
+
     render: function () {
         console.log(this.state);
-        return ( <DataGrid columns={this.getColumns()} data={this.state.clients} rowClickHandler={this._onRowClick}></DataGrid> );
+        return ( <DataGrid columns={this.getColumns()} data={this._getClients()} rowClickHandler={this._onRowClick}></DataGrid> );
     }
 });
 

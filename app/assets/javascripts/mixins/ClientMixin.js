@@ -1,4 +1,4 @@
-var Marty = require('Marty');
+var Marty = require('marty');
 var ClientStore = require('../stores/ClientStore');
 
 var ClientState = Marty.createStateMixin({

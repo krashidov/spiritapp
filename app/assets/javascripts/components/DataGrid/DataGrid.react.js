@@ -7,27 +7,25 @@ var Table = require('react-bootstrap/Table');
 var Router = require('react-router');
 var { Route, RouteHandler, Link } = Router;
 
-
+var DataGridRow =  require('./DataGridRow.react.js')
 var DataGrid = React.createClass({
   displayName: 'DataGrid',
   mixins: [Router.Navigation],
   propTypes: {
       columns: React.PropTypes.array.isRequired,
-      data: React.PropTypes.array.isRequired
+      data: React.PropTypes.array.isRequired,
+      rowClickHandler: React.PropTypes.func
   },
 
   _buildHeaders() {
-    return this.props.columns.map( (column) => {
+    return _.isEmpty(this.props.columns) ? [] : this.props.columns.map( (column) => {
       return (<th>{column}</th>);
     });
   },
 
-  _buildBody() {
-    return this.props.data.map( (row) =>{
-      var rowData = row.map((cell) =>{
-        return (<td>{cell}</td>);
-      });
-      return (<tr>{rowData}</tr>);
+  _buildBody(){
+    return _.map(this.props.data, (client) =>{
+      return (<DataGridRow id={client.id} data={client} rowClickHandler={this.props.rowClickHandler}/>);
     });
   },
 
