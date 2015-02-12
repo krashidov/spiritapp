@@ -33,14 +33,4 @@ class User < ActiveRecord::Base
   belongs_to :organization
 
   validates :organization, presence: true
-
-  before_validation :clean_user_for_dev
-
-  private
-
-  def clean_user_for_dev
-    if self.organization.nil?
-      self.organization = Organization.first
-    end
-  end
 end

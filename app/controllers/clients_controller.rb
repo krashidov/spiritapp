@@ -11,6 +11,15 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
+    respond_to do |format|
+      format.json do
+        render json: {
+          client: @client,
+          careplans: @careplans,
+          providers: @providers
+        }.to_json
+      end
+    end
   end
 
   # GET /clients/new
@@ -66,6 +75,8 @@ class ClientsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_client
       @client = Client.find(params[:id])
+      @careplans = Careplan.where(client: @client)
+      @providers = Provider.where(client: @client)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

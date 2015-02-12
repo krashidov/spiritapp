@@ -36,6 +36,7 @@ class Client < ActiveRecord::Base
   
   belongs_to :organization
   has_many :careplans, dependent: :destroy
+  has_many :providers, through: :careplans
 
   validates :organization_id, presence: true
   validates_uniqueness_of :medicaid

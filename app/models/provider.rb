@@ -36,6 +36,7 @@ class Provider < ActiveRecord::Base
  
   belongs_to :organization
   has_many :careplans, dependent: :destroy
+  has_many :clients, through: :careplans
 
   validates :last_name, presence: true
   validates :first_name, presence: true

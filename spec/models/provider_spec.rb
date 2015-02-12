@@ -43,13 +43,13 @@ RSpec.describe Provider, :type => :model do
   end
 
   describe "with invalid data" do
-    it "does not create providers without a firstname" do
-      @provider.firstname = nil
+    it "does not create providers without a first_name" do
+      @provider.first_name = nil
       expect(@provider).to be_invalid
     end
 
-    it "does not create providers without a lastname" do
-      @provider.lastname = nil
+    it "does not create providers without a last_name" do
+      @provider.last_name = nil
       expect(@provider).to be_invalid
     end
 
@@ -118,6 +118,13 @@ RSpec.describe Provider, :type => :model do
     it "should belong to an organization" do
       @provider.organization = nil
       expect(@provider).to be_invalid
+    end
+
+    it "should belong to an organization" do
+      client = FactoryGirl.create(:client)
+      provider = FactoryGirl.create(:provider)
+      careplan = FactoryGirl.create(:careplan, client: client, provider: provider)
+      expect(provider.clients.first).to eq(client)
     end
   end
 

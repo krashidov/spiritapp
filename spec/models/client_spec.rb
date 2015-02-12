@@ -45,13 +45,13 @@ RSpec.describe Client, :type => :model do
       expect(client).to be_invalid
     end
 
-    it "does not create clients without a firstname" do
-      client = FactoryGirl.build(:client, firstname: nil)
+    it "does not create clients without a first_name" do
+      client = FactoryGirl.build(:client, first_name: nil)
       expect(client).to be_invalid
     end
 
-    it "does not create clients without a lastname" do
-      client = FactoryGirl.build(:client, lastname: nil)
+    it "does not create clients without a last_name" do
+      client = FactoryGirl.build(:client, last_name: nil)
       expect(client).to be_invalid
     end
 
@@ -113,6 +113,13 @@ RSpec.describe Client, :type => :model do
     it "should have an organization" do
       client = FactoryGirl.build(:client, organization: nil)
       expect(client).to be_invalid
+    end
+
+    it "can have providers" do
+      client = FactoryGirl.create(:client)
+      provider = FactoryGirl.create(:provider)
+      careplan = FactoryGirl.create(:careplan, client: client, provider: provider)
+      expect(client.providers.first).to eq(provider)
     end
   end
 
