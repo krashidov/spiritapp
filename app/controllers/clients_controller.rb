@@ -76,7 +76,7 @@ class ClientsController < ApplicationController
     def set_client
       @client = Client.find(params[:id])
       @careplans = Careplan.where(client: @client)
-      @providers = Provider.where(client: @client)
+      @providers = @client.providers
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
