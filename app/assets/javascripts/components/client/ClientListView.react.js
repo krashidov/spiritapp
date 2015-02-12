@@ -10,25 +10,17 @@ var ClientActionCreators = require('../../actions/ClientActionCreators');
 var ClientStore =  require('../../stores/ClientStore');
 
 //Components
-var Table = require('react-bootstrap/Table');
+var DataGrid = require('../DataGrid/DataGrid.react.js');
 
+//Mixins
+var ClientState = require('../../mixins/ClientMixin.js');
 
 
 var ClientListView = React.createClass({
     displayName: 'ClientListView',
-    mixins: [Router.Navigation],
-
-    _onChange(){
-        this.setState({
-            clients: ClientStore.getClients()
-        });
-    },
+    mixins: [Router.Navigation, ClientState],
 
     componentDidMount(){
-        var listener = ClientStore.addChangeListener(function(){
-            this._onChange();
-            listener.dispose();
-        }, this);
         ClientActionCreators.loadClients();
     },
 
@@ -39,14 +31,27 @@ var ClientListView = React.createClass({
     getColumns(){
         var ret = [];
         for (var key in this.state.clients && this.state.clients[0]){
-                ret.push({key: key, label : key.split('_').join(' ')});
+                ret.push(key.split('_').join(' '));
         }
         return ret;
     },
 
+    _getClientMarkup(){
+        return _.map(this.state.clients, (client) =>{
+            client.id = (<Link to="client" params={{clientId: client.id}}>{client.id}</Link>);
+            return client;
+        });
+    },
+
+    _onRowClick(clientId){
+        this.transitionTo('client', {clientId: clientId});
+    },
+
     render: function () {
-        return ( <div> </div> );
+        console.log(this.state);
+        return ( <DataGrid columns={this.getColumns()} data={this.state.clients} rowClickHandler={this._onRowClick}></DataGrid> );
     }
 });
 
 module.exports = ClientListView;
+
