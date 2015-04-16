@@ -18,14 +18,14 @@ var ClientState = require('../../mixins/ClientMixin.js');
 
 var ClientListView = React.createClass({
     displayName: 'ClientListView',
-    mixins: [Router.Navigation, ClientState],
+    mixins: [Router.Navigation],
 
     componentDidMount(){
         ClientActionCreators.loadClients();
     },
 
     getInitialState(){
-        return ClientStore.getInitialState()
+        return {};//ClientStore.getInitialState()
     },
 
     getColumns(){

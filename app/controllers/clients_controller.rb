@@ -11,15 +11,8 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
-    respond_to do |format|
-      format.json do
-        render json: {
-          client: @client,
-          careplans: @careplans,
-          providers: @providers
-        }.to_json
-      end
-    end
+    client_as_json = ClientSerializer.new(@client).as_json 
+    render json: client_as_json.to_json
   end
 
   # GET /clients/new
@@ -29,6 +22,7 @@ class ClientsController < ApplicationController
 
   # GET /clients/1/edit
   def edit
+    render 'edit'
   end
 
   # POST /clients
@@ -50,6 +44,7 @@ class ClientsController < ApplicationController
   # PATCH/PUT /clients/1
   # PATCH/PUT /clients/1.json
   def update
+    debugger
     respond_to do |format|
       if @client.update(client_params)
         format.html { redirect_to @client, notice: 'Client was successfully updated.' }
@@ -81,6 +76,7 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params[:client]
+      allow = [:first_name, :last_name, :address_1, :address_2, :city, :state, :zip, :phone_number, :email, :birthday, :position, :bio, :team, :team_id, :number]
+          params.require(:player).permit(allow)
     end
 end

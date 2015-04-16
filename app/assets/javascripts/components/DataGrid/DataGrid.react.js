@@ -2,7 +2,7 @@ var React = require('react');
 var _ = require('lodash');
 var ClientActionCreators = require('../../actions/ClientActionCreators');
 var ClientStore =  require('../../stores/ClientStore');
-var Table = require('react-bootstrap/Table');
+var Table = require('react-bootstrap').Table;
 
 var Router = require('react-router');
 var { Route, RouteHandler, Link } = Router;

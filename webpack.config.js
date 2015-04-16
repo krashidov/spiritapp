@@ -4,6 +4,8 @@ var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('shared.js');
 var reactPath = './app/assets/javascripts/components/';
 
 module.exports = {
+
+  devtool: 'eval-source-tool',
   entry: {
     'App':path.resolve(reactPath, 'app.react.js')
   },
@@ -30,6 +32,7 @@ module.exports = {
   module: {
     loaders: [
       {test: /\.react\.js$/, loader: 'jsx-loader?harmony'},
+      {test: /\.js$/, loader: 'jsx-loader?harmony'},
       {test: /\.react\.js$/, loader: 'jsx-loader?insertPragma=React.DOM'}
     ]
   }

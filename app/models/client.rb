@@ -54,4 +54,8 @@ class Client < ActiveRecord::Base
   validates :date_of_birth, presence: true
   validates :par_expiration, presence: true
   validates :emergency_contact_info, presence: true
+
+  def attributes
+    @attributes
+  end
 end

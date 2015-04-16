@@ -1,0 +1,160 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/krashidov/.nvm/v0.10.36/bin/node',
+1 verbose cli   '/Users/krashidov/.nvm/v0.10.36/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.36
+4 warn package.json spiritapp@ No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/Users/krashidov/projects/spiritapp',
+6 verbose install   [ 'lodash',
+6 verbose install     'marty',
+6 verbose install     'react',
+6 verbose install     'react-bootstrap',
+6 verbose install     'react-router',
+6 verbose install     'react-table',
+6 verbose install     'react-tools',
+6 verbose install     'rsvp',
+6 verbose install     'jest-cli',
+6 verbose install     'jsx-loader',
+6 verbose install     'node-debug',
+6 verbose install     'reactable',
+6 verbose install     'reflux',
+6 verbose install     'webpack' ] ]
+7 info preinstall spiritapp@
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping react-bootstrap@* /Users/krashidov/projects/spiritapp
+10 verbose already installed skipping react-router@* /Users/krashidov/projects/spiritapp
+11 verbose already installed skipping react-table@^1.0.0 /Users/krashidov/projects/spiritapp
+12 verbose already installed skipping react-tools@* /Users/krashidov/projects/spiritapp
+13 verbose already installed skipping rsvp@^3.0.16 /Users/krashidov/projects/spiritapp
+14 verbose already installed skipping jest-cli@^0.2.1 /Users/krashidov/projects/spiritapp
+15 verbose already installed skipping jsx-loader@^0.12.2 /Users/krashidov/projects/spiritapp
+16 verbose already installed skipping node-debug@^0.1.0 /Users/krashidov/projects/spiritapp
+17 verbose already installed skipping reactable@^0.9.4 /Users/krashidov/projects/spiritapp
+18 verbose already installed skipping reflux@^0.2.3 /Users/krashidov/projects/spiritapp
+19 verbose already installed skipping webpack@^1.4.13 /Users/krashidov/projects/spiritapp
+20 verbose already installed skipping lodash@3.0.0 /Users/krashidov/projects/spiritapp
+21 verbose already installed skipping marty@* /Users/krashidov/projects/spiritapp
+22 verbose cache add [ 'react@13.1', null ]
+23 verbose cache add name=undefined spec="react@13.1" args=["react@13.1",null]
+24 verbose parsed url { protocol: null,
+24 verbose parsed url   slashes: null,
+24 verbose parsed url   auth: null,
+24 verbose parsed url   host: null,
+24 verbose parsed url   port: null,
+24 verbose parsed url   hostname: null,
+24 verbose parsed url   hash: null,
+24 verbose parsed url   search: null,
+24 verbose parsed url   query: null,
+24 verbose parsed url   pathname: 'react@13.1',
+24 verbose parsed url   path: 'react@13.1',
+24 verbose parsed url   href: 'react@13.1' }
+25 verbose cache add name="react" spec="13.1" args=["react","13.1"]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: '13.1',
+26 verbose parsed url   path: '13.1',
+26 verbose parsed url   href: '13.1' }
+27 verbose addNamed [ 'react', '13.1' ]
+28 verbose addNamed [ null, '>=13.1.0-0 <13.2.0-0' ]
+29 silly lockFile 744d5b7c-react-13-1 react@13.1
+30 verbose lock react@13.1 /Users/krashidov/.npm/744d5b7c-react-13-1.lock
+31 silly addNameRange { name: 'react', range: '>=13.1.0-0 <13.2.0-0', hasData: false }
+32 verbose request where is /react
+33 verbose request registry https://registry.npmjs.org/
+34 verbose request id a6a139051ac383f2
+35 verbose url raw /react
+36 verbose url resolving [ 'https://registry.npmjs.org/', './react' ]
+37 verbose url resolved https://registry.npmjs.org/react
+38 verbose request where is https://registry.npmjs.org/react
+39 info trying registry request attempt 1 at 22:14:54
+40 verbose etag "966L4B31ERJW4K51M2132BELP"
+41 http GET https://registry.npmjs.org/react
+42 http 304 https://registry.npmjs.org/react
+43 silly registry.get cb [ 304,
+43 silly registry.get   { date: 'Thu, 16 Apr 2015 04:14:54 GMT',
+43 silly registry.get     server: 'Apache',
+43 silly registry.get     via: '1.1 varnish',
+43 silly registry.get     'last-modified': 'Thu, 16 Apr 2015 04:14:54 GMT',
+43 silly registry.get     'cache-control': 'max-age=60',
+43 silly registry.get     etag: '"966L4B31ERJW4K51M2132BELP"',
+43 silly registry.get     age: '0',
+43 silly registry.get     'x-served-by': 'cache-ord1730-ORD',
+43 silly registry.get     'x-cache': 'HIT',
+43 silly registry.get     'x-cache-hits': '1',
+43 silly registry.get     'x-timer': 'S1429157694.129429,VS0,VE40',
+43 silly registry.get     vary: 'Accept',
+43 silly registry.get     'content-length': '0',
+43 silly registry.get     'keep-alive': 'timeout=10, max=50',
+43 silly registry.get     connection: 'Keep-Alive' } ]
+44 verbose etag https://registry.npmjs.org/react from cache
+45 silly addNameRange number 2 { name: 'react', range: '>=13.1.0-0 <13.2.0-0', hasData: true }
+46 silly addNameRange versions [ 'react',
+46 silly addNameRange   [ '0.0.1',
+46 silly addNameRange     '0.0.2',
+46 silly addNameRange     '0.0.3',
+46 silly addNameRange     '0.1.2',
+46 silly addNameRange     '0.2.0',
+46 silly addNameRange     '0.2.1',
+46 silly addNameRange     '0.2.2',
+46 silly addNameRange     '0.2.3',
+46 silly addNameRange     '0.2.4',
+46 silly addNameRange     '0.2.5',
+46 silly addNameRange     '0.2.6',
+46 silly addNameRange     '0.3.0',
+46 silly addNameRange     '0.3.4',
+46 silly addNameRange     '0.3.5',
+46 silly addNameRange     '0.5.0',
+46 silly addNameRange     '0.5.1',
+46 silly addNameRange     '0.5.2',
+46 silly addNameRange     '0.6.0',
+46 silly addNameRange     '0.6.1',
+46 silly addNameRange     '0.6.2',
+46 silly addNameRange     '0.6.3',
+46 silly addNameRange     '0.7.0',
+46 silly addNameRange     '0.7.1',
+46 silly addNameRange     '0.8.0',
+46 silly addNameRange     '0.9.0-rc1',
+46 silly addNameRange     '0.9.0',
+46 silly addNameRange     '0.10.0-rc1',
+46 silly addNameRange     '0.10.0',
+46 silly addNameRange     '0.11.0-rc1',
+46 silly addNameRange     '0.11.0',
+46 silly addNameRange     '0.11.1',
+46 silly addNameRange     '0.11.2',
+46 silly addNameRange     '0.12.0-rc1',
+46 silly addNameRange     '0.12.0',
+46 silly addNameRange     '0.12.1',
+46 silly addNameRange     '0.12.2',
+46 silly addNameRange     '0.13.0-alpha.1',
+46 silly addNameRange     '0.13.0-alpha.2',
+46 silly addNameRange     '0.13.0-beta.1',
+46 silly addNameRange     '0.13.0-beta.2',
+46 silly addNameRange     '0.13.0-rc1',
+46 silly addNameRange     '0.13.0-rc2',
+46 silly addNameRange     '0.13.0',
+46 silly addNameRange     '0.13.1' ] ]
+47 silly lockFile 744d5b7c-react-13-1 react@13.1
+48 silly lockFile 744d5b7c-react-13-1 react@13.1
+49 error notarget No compatible version found: react@'>=13.1.0-0 <13.2.0-0'
+49 error notarget Valid install targets:
+49 error notarget ["0.10.0-rc1","0.11.0-rc1","0.0.1","0.0.2","0.0.3","0.1.2","0.2.0","0.2.1","0.2.2","0.2.3","0.2.4","0.2.5","0.2.6","0.3.0","0.3.4","0.3.5","0.5.0","0.5.1","0.5.2","0.6.0","0.6.1","0.6.2","0.6.3","0.7.0","0.7.1","0.8.0","0.9.0-rc1","0.9.0","0.10.0-rc1","0.10.0","0.11.0-rc1","0.11.0","0.11.1","0.11.2","0.12.0-rc1","0.12.0","0.12.1","0.12.2","0.13.0-alpha.1","0.13.0-alpha.2","0.13.0-beta.1","0.13.0-beta.2","0.13.0-rc1","0.13.0-rc2","0.13.0","0.13.1"]
+49 error notarget
+49 error notarget This is most likely not a problem with npm itself.
+49 error notarget In most cases you or one of your dependencies are requesting
+49 error notarget a package version that doesn't exist.
+50 error System Darwin 14.1.0
+51 error command "/Users/krashidov/.nvm/v0.10.36/bin/node" "/Users/krashidov/.nvm/v0.10.36/bin/npm" "install"
+52 error cwd /Users/krashidov/projects/spiritapp
+53 error node -v v0.10.36
+54 error npm -v 1.4.28
+55 error code ETARGET
+56 verbose exit [ 1, true ]

@@ -10,16 +10,16 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.3.4'
 gem 'autoprefixer-rails'
 gem 'attr_encrypted'
-gem 'cancan'
 gem 'rolify'
 gem 'paper_trail', '~> 3.0.5'
 gem 'devise'
-gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
+gem 'react-rails', '~> 1.0.0', github: 'reactjs/react-rails'
 gem 'therubyracer', platforms: :ruby
-
+gem 'haml'
+gem 'active_model_serializers'
 
 group :test, :development do
   gem 'spring-commands-rspec'

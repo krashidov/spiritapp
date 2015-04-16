@@ -3,8 +3,8 @@
   "main": "webpack.config.js",
   "dependencies": {
     "lodash": "3.0.0",
-    "marty": "^0.8.3",
-    "react": "^0.12.2",
+    "marty": "*",
+    "react": "0.13.1",
     "react-bootstrap": "*",
     "react-router": "*",
     "react-table": "^1.0.0",
@@ -13,11 +13,9 @@
   },
   "devDependencies": {
     "jest-cli": "^0.2.1",
-    "jsx-loader": "^0.12.2",
+    "jsx-loader": "^0.13.1",
     "node-debug": "^0.1.0",
-    "reactable": "^0.9.4",
-    "reflux": "^0.2.3",
-    "webpack": "^1.4.13"
+    "webpack": "^1.8.4"
   },
   "license": "MIT",
   "engines": {

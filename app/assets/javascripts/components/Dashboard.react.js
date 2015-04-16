@@ -1,14 +1,15 @@
 var React = require('react');
 var Router = require('react-router');
 var { Route, RouteHandler, Link } = Router;
-var Row = require('react-bootstrap/Row');
-var Col = require('react-bootstrap/Col');
-var Button = require('react-bootstrap/Button');
+var Row = require('react-bootstrap').Row;
+var Col = require('react-bootstrap').Col;
+var Button = require('react-bootstrap').Button;
 
 var Dashboard = React.createClass({
   mixins: [ Router.State ],
 
   render: function () {
+    debugger;
     return (
       <Row>
         <Col xs={4}>
