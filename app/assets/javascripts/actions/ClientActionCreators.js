@@ -3,12 +3,12 @@ var ClientActions = require('../constants/Constants').ClientActions;
 var ClientApi = require('../sources/ClientApi');
 
 var ClientActionCreators = Marty.createActionCreators({
-  loadClients: ClientActions.LOAD_CLIENTS( () => {
+  loadClients(){
     ClientApi.getClients();
-  }),
-  updateClient: ClientActions.UPDATE_CLIENT( (id, data) => {
+  },
+  updateClient(id, data){
     ClientApi.updateClient(id, data);
-  })
+  }
 });
 
 module.exports = ClientActionCreators;

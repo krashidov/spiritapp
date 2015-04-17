@@ -8,11 +8,8 @@ var View = require('./View.react.js')
 var ClientEdit = require('./client/ClientEdit.react.js')
 var ClientListView = require('./client/ClientListView.react.js');
 
-var App = React.createClass({
-
-  mixins: [ Router.Navigation ],
-
-  render: function () {
+class App extends React.Component{
+  render() {
     return (
       <div className="container">
         <TopNavbar/>
@@ -21,7 +18,7 @@ var App = React.createClass({
       </div>
     );
   }
-});
+};
 
 var routes = (
   <Route handler={App}>
@@ -34,8 +31,8 @@ var routes = (
 
 
 if(typeof(document) !== "undefined"){
-  Router.run(routes, Router.HistoryLocation, function (Handler) {
-      React.render(<Handler/>, document.getElementById('example'));
+  Router.run(routes, Router.HistoryLocation, function (Handler, state) {
+      React.render(<Handler {...state}/>, document.getElementById('example'));
           
   });
 }

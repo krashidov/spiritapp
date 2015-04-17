@@ -13,33 +13,32 @@ var ClientState = require('../../mixins/ClientMixin.js');
 var InlineForm = require('../EditPage/InlineForm');
 
 var ClientEdit = React.createClass({
-    displayName: 'ClientEdit',
-    mixins: [Router.State],
+    // displayName: 'ClientEdit',
+    // mixins: [ClientState, Router.State],
 
-    getState(){
-      debugger;
-      return {
-        currentClient: ClientStore.getClient(this.getParams().clientId)
-      };
-    },
+    // getState(){
+    //   debugger;
+    //   return {
+    //     currentClient: ClientStore.getClient(this.getParams().clientId)
+    //   };
+    // },
 
-    componentWillUpdate(){
-      return this.setState({
-        currentClient: ClientStore.getClient(this.getParams().clientId)
-      });
-    },
+    // componentWillUpdate(){
+    //   return this.setState({
+    //     currentClient: ClientStore.getClient(this.getParams().clientId)
+    //   });
+    // },
 
-    onFormSubmit(e, value){
-      e.preventDefault();
-    },
+    // onFormSubmit(e, value){
+    //   e.preventDefault();
+    // },
 
-    _generateForm(){
-      debugger;
-    },
+    // _generateForm(){
+    //   debugger;
+    // },
 
     render() {
-      var x =  this._generateForm();
-      return (<div>{this.state.currentClient}</div>);
+      return (<div>Jello jorld!</div>);
     }
 });
 

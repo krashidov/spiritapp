@@ -2,13 +2,13 @@ var Marty = require('marty');
 var ClientActions = require('../constants/Constants').ClientActions;
 
 var ClientSourceActionCreators = Marty.createActionCreators({
-  addClients: ClientActions.ADD_CLIENTS(function (clients) {
-    this.dispatch(clients);
-  }),
+  addClients(clients) {
+    this.dispatch(ClientActions.ADD_CLIENTS, clients);
+  },
 
-  addClient: ClientActions.ADD_CLIENT(function (client) {
-    this.dispatch(client);
-  }),
+  addClient(client){
+    this.dispatch(ClientActions.ADD_CLIENT, client);
+  }
 });
 
 module.exports = ClientSourceActionCreators;
