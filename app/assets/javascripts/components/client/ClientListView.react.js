@@ -17,7 +17,7 @@ var ClientState = require('../../mixins/ClientMixin.js');
 
 class ClientListView extends React.Component {
   componentDidMount(){
-    ClientActionCreators.loadClients();
+    this.app.ClientActionCreators.loadClients();
   }
 
   getColumns(){
@@ -68,10 +68,10 @@ ClientListView.contextTypes = {
 ClientListView.prototype.displayName = 'ClientListView';
 
 module.exports = Marty.createContainer(ClientListView, {
-  listenTo: ClientStore, 
+  listenTo: 'ClientStore', 
   fetch: {
     clients(){
-      return ClientStore.getClients()
+      return this.app.ClientStore.getClients();
     }
   }
 });

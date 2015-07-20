@@ -1,13 +1,13 @@
 var path = require('path');
 var webpack = require('webpack');
 var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('shared.js');
-var reactPath = './app/assets/javascripts/components/';
+var reactPath = './app/assets/javascripts/';
 
 module.exports = {
 
   devtool: 'eval-source-tool',
   entry: {
-    'App':path.resolve(reactPath, 'app.react.js')
+    'App':path.resolve(reactPath, 'index.js')
   },
   output: {
     path: './app/assets/javascripts/built',

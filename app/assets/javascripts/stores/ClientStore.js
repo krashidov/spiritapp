@@ -5,7 +5,8 @@ var Constants = require('../constants/Constants');
 var _ = require('lodash');
 
 var ClientStore = Marty.createStore({
-  name: 'Clients',
+  id: 'clientStore',
+
   handlers: {
     setClients: Constants.ClientActions.ADD_CLIENTS,
     addClient: Constants.ClientActions.ADD_CLIENT
@@ -35,7 +36,7 @@ var ClientStore = Marty.createStore({
         return _.find(this.state, {id: Number(id)} );
       },
       remotely() {
-        return ClientApi.getClient(id);
+        return this.app.ClientApi.getClient(id);
       }
     });
   } 

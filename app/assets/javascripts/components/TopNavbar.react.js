@@ -16,7 +16,6 @@ var TopNavbar = React.createClass({
             <Navbar>
               <Nav>
                 <li>
-                  <Link to="dashboard">Dashboard</Link>
                 </li>
                 <li>
                   <a data-method="delete" href="/users/sign_out" rel="nofollow">Logout</a>

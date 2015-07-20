@@ -4,7 +4,7 @@ var ClientApi = require('../sources/ClientApi');
 
 var ClientActionCreators = Marty.createActionCreators({
   loadClients(){
-    ClientApi.getClients();
+    this.app.ClientApi.getClients();
   },
   updateClient(id, data){
     ClientApi.updateClient(id, data);

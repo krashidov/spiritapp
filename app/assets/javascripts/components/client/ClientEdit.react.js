@@ -2,6 +2,7 @@ var React = require('react');
 var _ = require('lodash');
 var Router = require('react-router');
 var { Route, RouteHandler, Link } = Router;
+var  { Input } = require('react-bootstrap');
 
 //Stores
 var ClientStore =  require('../../stores/ClientStore');
@@ -38,7 +39,16 @@ var ClientEdit = React.createClass({
     // },
 
     render() {
-      return (<div>Jello jorld!</div>);
+      const inputs = _.map(this.props.client, (value, key) => {
+        debugger;
+        return <Input type='text' value={ value } label={ key } labelClassName='col-xs-2' wrapperClassName='col-xs-10'/>;
+      });
+
+      return (
+        <form>
+          { inputs }
+        </form>
+      );
     }
 });
 
